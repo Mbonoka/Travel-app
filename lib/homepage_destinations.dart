@@ -23,14 +23,13 @@ class DestinationList extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Image
                 ClipRRect(
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(12),
                     topRight: Radius.circular(12),
                   ),
                   child: Image.asset(
-                    '/assets/images/download.jpeg',
+                    '/assets/images/pic1.jpg',
                     height: 200,
                     width: double.infinity,
                     fit: BoxFit.cover,
