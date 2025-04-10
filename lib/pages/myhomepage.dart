@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homepage_destinations.dart'; // This will be added by Part 2B
+import 'homepage_destinations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required String title});
@@ -28,22 +28,33 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(icon: const Icon(Icons.hotel), onPressed: () {}),
                 IconButton(
-                  icon: const Icon(Icons.local_activity),
+                  icon: const Icon(Icons.temple_buddhist),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DestinationList(),
+                      ),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.beach_access),
                   onPressed: () {},
                 ),
-                IconButton(icon: const Icon(Icons.pool), onPressed: () {}),
-                IconButton(icon: const Icon(Icons.wifi), onPressed: () {}),
+
                 IconButton(
-                  icon: const Icon(Icons.filter_list),
+                  icon: const Icon(Icons.pool_outlined),
+                  onPressed: () {},
+                ),
+                IconButton(icon: const Icon(Icons.sunny), onPressed: () {}),
+                IconButton(icon: const Icon(Icons.hotel),
                   onPressed: () {},
                 ),
               ],
             ),
             const SizedBox(height: 16),
-
-            const Expanded(child: DestinationList()),
           ],
         ),
       ),
