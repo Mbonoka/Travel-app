@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'homepage_destinations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required String title});
@@ -12,7 +11,6 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Search Bar
             TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
@@ -24,33 +22,30 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Filter Icons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(
-                  icon: const Icon(Icons.temple_buddhist),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const DestinationList(),
-                      ),
-                    );
-                  },
-                ),
-                IconButton(
-                  icon: const Icon(Icons.beach_access),
-                  onPressed: () {},
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/images/Vector.png'),
                 ),
 
-                IconButton(
-                  icon: const Icon(Icons.pool_outlined),
-                  onPressed: () {},
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/images/beach.png'),
                 ),
-                IconButton(icon: const Icon(Icons.sunny), onPressed: () {}),
-                IconButton(icon: const Icon(Icons.hotel),
-                  onPressed: () {},
+
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/images/swimming.png'),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/images/island.png'),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/images/building.png'),
                 ),
               ],
             ),

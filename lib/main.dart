@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/pages/myhomepage.dart';
+import 'package:travel_app/pages/myhomepage_search.dart';
 
 void main() {
   runApp(const MyApp());
